@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
-import logo from '../Assets/logo.png'; // Adjust the path as necessary
+import React, { useState, useEffect } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import logo from "../Assets/logo.png";
+import { Link } from "react-router-dom";
+import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
+import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, setExpand] = useState(false);
@@ -39,6 +42,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link as={Link} to="/about" onClick={() => setExpand(false)}>
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/project" onClick={() => setExpand(false)}>
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Experiences
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/resume" onClick={() => setExpand(false)}>
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
           </Nav>
