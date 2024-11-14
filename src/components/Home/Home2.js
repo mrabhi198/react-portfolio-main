@@ -22,7 +22,7 @@ function Home2() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> HR, Business Analytics, Digital Marketing, Financial Markets and Management. </b>
+                <b className="purple"> HR, Business Analytics, Recruitment and Talent Management, Data Analysis and Visualization and Project Management. </b>
               </i>
               <br />
               <br />

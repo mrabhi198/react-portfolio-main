@@ -6,9 +6,10 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          "Human Resources Manager",
-          "Business Law Analyst",
-          "Business Manager",
+          "HR Professional",
+          "Business Analyst",
+          "Recruitment Specialist",
+          "Talent Acquisition",
         ],
         autoStart: true,
         loop: true,
