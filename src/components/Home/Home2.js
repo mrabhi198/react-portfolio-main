@@ -26,13 +26,9 @@ function Home2() {
               </i>
               <br />
               <br />
-              The aspiration is to utilize the acquired knowledge skills pursue &nbsp;
+              My goal is to apply my knowledge and skills toward an 
               <i>
-                <b className="purple">entrepreneurial path, directing creativity </b> and
-                expertise toward shaping the{" "}
-                <b className="purple">
-                  Business Landscap.
-                </b>
+                <b className="purple"> entrepreneurial path, channeling creativity </b> and expertise to shape the <b className="purple"> business landscape</b>
               </i>
             </p>
           </Col>
