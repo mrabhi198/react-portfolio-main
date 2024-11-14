@@ -22,13 +22,13 @@ function AboutCard() {
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Sleeping
+              <ImPointRight /> Travelling
             </li>
             <li className="about-activity">
               <ImPointRight /> Making Blogs
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Playing Games
             </li>
           </ul>
         </blockquote>
