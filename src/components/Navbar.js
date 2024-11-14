@@ -46,7 +46,7 @@ function NavBar() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link as={Link} to="/project" onClick={() => setExpand(false)}>
-                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
+                <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Experiences
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
