@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-function ProjectCards(props) {
+function ExpCards(props) {
   return (
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
@@ -14,4 +14,4 @@ function ProjectCards(props) {
     </Card>
   );
 }
-export default ProjectCards;
+export default ExpCards;
