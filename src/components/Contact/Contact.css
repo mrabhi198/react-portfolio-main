@@ -1,70 +1,57 @@
-.contact-section {
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #1e1e2f, #25253c);
-    color: #fff;
-    text-align: center;
-    border-radius: 15px;
-    margin: 20px;
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 150px ;
+    justify-content: center;
   }
   
-  .contact-title {
+  .contact-container h2 {
+    color: #333;
     font-size: 2rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .contact-subtitle {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    color: #ccc;
+    margin-bottom: 20px;
   }
   
   .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
   }
   
-  .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #bbb;
-  }
-  
-  .form-group input,
-  .form-group textarea {
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #444;
+    margin: 10px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background: #2e2e44;
-    color: #fff;
     font-size: 1rem;
   }
   
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: #666;
+  .contact-form textarea {
+    resize: none;
+    height: 150px;
   }
   
-  .contact-submit-btn {
-    display: inline-block;
-    padding: 10px 30px;
+  .contact-form button {
+    background-color: #623686;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    background-color: #ff5c5c;
-    color: #fff;
+    padding: 10px;
     font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s;
   }
   
-  .contact-submit-btn:hover {
-    background-color: #ff3c3c;
+  .contact-form button:hover {
+    background-color: #5f1daa;
+  }
+  
+  .status-message {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #4caf50;
   }
   
