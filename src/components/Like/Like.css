@@ -1,0 +1,6 @@
+/* src/components/Like.css */
+.like-section {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
