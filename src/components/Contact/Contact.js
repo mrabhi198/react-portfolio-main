@@ -17,7 +17,8 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("sendMail.php", {
+    // Call the PHP API to insert data
+    const response = await fetch("http://localhost/your-backend-folder/insert.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,11 +27,12 @@ const Contact = () => {
     });
 
     const result = await response.json();
+
     if (result.success) {
       setStatus("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", message: "" }); // Reset form
     } else {
-      setStatus("Failed to send the message. Please try again.");
+      setStatus("Error sending message. Please try again.");
     }
   };
 
@@ -62,8 +64,8 @@ const Contact = () => {
           required
         ></textarea>
         <button type="submit">Send Message</button>
-        {status && <p className="status-message">{status}</p>}
       </form>
+      {status && <p className="status-message">{status}</p>}
     </div>
   );
 };
