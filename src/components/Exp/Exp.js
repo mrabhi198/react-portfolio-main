@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import ExpCards from "./ExpCards";
 import Particle from "../Particle";
 import ExpCards from "./ExpCards";
-import chatify from "../../Assets/Projects/chatify.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import internship from "../../Assets/Img/internship.jpg";
+import volunteer from "../../Assets/Img/vol.jpeg";
 
 function Exp() {
   return (
@@ -20,7 +19,7 @@ function Exp() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ExpCards
-              imgPath={chatify}
+              imgPath={internship}
               isBlog={false}
               title="An intern in Jain Divya & CO."
               description="Worked as an auditor at Jain Divya & Co., gaining hands-on experience in financial auditing, compliance, and report analysis under the guidance of a Chartered Accountant."
@@ -29,7 +28,7 @@ function Exp() {
 
           <Col md={4} className="project-card">
             <ExpCards
-              imgPath={bitsOfCode}
+              imgPath={volunteer}
               isBlog={false}
               title="Volunteer in Glad Bharat Foundation"
               description="Gained insights into the operations of non-profit organizations and the importance of community service in societal development."
