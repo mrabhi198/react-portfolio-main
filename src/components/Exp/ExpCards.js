@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 function ExpCards(props) {
   return (
-    <Card className="project-card-view">
+    <Card className="exp-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>

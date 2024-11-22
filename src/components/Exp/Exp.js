@@ -7,17 +7,17 @@ import volunteer from "../../Assets/Img/vol.jpeg";
 
 function Exp() {
   return (
-    <Container fluid className="project-section">
+    <Container fluid className="exp-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
+        <h1 className="exp-heading">
           I have <strong className="purple">Experience </strong>on
         </h1>
         <p style={{ color: "white" }}>
           Here are a few role I've recently worked as.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col md={4} className="exp-card">
             <ExpCards
               imgPath={internship}
               isBlog={false}
@@ -26,7 +26,7 @@ function Exp() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col md={4} className="exp-card">
             <ExpCards
               imgPath={volunteer}
               isBlog={false}
