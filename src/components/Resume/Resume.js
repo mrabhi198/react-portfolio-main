@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Row } from 'react-bootstrap';
 import { AiOutlineDownload } from 'react-icons/ai';
-import './Resume.css';
 
 const Resume = () => {
   const pdfUrl = "/Ankita_Sinha.pdf";
