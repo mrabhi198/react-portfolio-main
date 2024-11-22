@@ -1,29 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
-import pdf from "../../Assets/Ankita_Sinha.pdf"
-import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
+import React from 'react';
+import { Button, Row } from 'react-bootstrap';
+import { AiOutlineDownload } from 'react-icons/ai';
 
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
+const Resume = () => {
+  const pdfUrl = "/Ankita_Sinha.pdf";
 
   return (
-    <div>
-      <Container fluid className="resume-section">
-        <Particle />
+    <section className="resume">
+      <div className="resume-content">
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={pdfUrl}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
@@ -32,16 +20,25 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row>
+        <br />
+
+        <iframe
+          src={pdfUrl}
+          title="Resume"
+          width="100%"
+          height="600px"
+          style={{
+            border: "none",
+            marginTop: "20px",
+          }}
+        ></iframe>
+
+        <br/>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={pdf}
+            href={pdfUrl}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
@@ -49,9 +46,11 @@ function ResumeNew() {
             &nbsp;Download CV
           </Button>
         </Row>
-      </Container>
-    </div>
+
+        
+      </div>
+    </section>
   );
-}
+};
 
-export default ResumeNew;
+export default Resume;

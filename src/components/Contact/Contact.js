@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
 
     // Call the PHP API to insert data
-    const response = await fetch("http://localhost/your-backend-folder/insert.php", {
+    const response = await fetch("http://localhost/portfolio-main/insert.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
