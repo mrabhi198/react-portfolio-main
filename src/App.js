@@ -7,12 +7,7 @@ import Exp from "./components/Exp/Exp";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/Resume";
 import Contact from "./components/Contact/Contact";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
