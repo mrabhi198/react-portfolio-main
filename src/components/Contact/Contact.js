@@ -17,7 +17,6 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Call the PHP API to insert data
     const response = await fetch("http://localhost/portfolio-main/insert.php", {
       method: "POST",
       headers: {
@@ -30,7 +29,7 @@ const Contact = () => {
 
     if (result.success) {
       setStatus("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" }); // Reset form
+      setFormData({ name: "", email: "", message: "" });
     } else {
       setStatus("Error sending message. Please try again.");
     }

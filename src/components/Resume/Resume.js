@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Row } from 'react-bootstrap';
 import { AiOutlineDownload } from 'react-icons/ai';
+import './Resume.css';
 
 const Resume = () => {
   const pdfUrl = "/Ankita_Sinha.pdf";
@@ -22,16 +23,7 @@ const Resume = () => {
 
         <br />
 
-        <iframe
-          src={pdfUrl}
-          title="Resume"
-          width="100%"
-          height="600px"
-          style={{
-            border: "none",
-            marginTop: "20px",
-          }}
-        ></iframe>
+        <iframe src={pdfUrl} title="Resume" width="100%" height="600px" style={{ border: "none", marginTop: "20px"}}></iframe>
 
         <br/>
 

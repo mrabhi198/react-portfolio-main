@@ -1,4 +1,3 @@
-// src/components/Like.js
 import React, { useState, useEffect } from 'react';
 import { AiFillLike } from 'react-icons/ai';
 import './Like.css';
@@ -16,7 +15,6 @@ function Like() {
     const newLikes = likes + 1;
     setLikes(newLikes);
     localStorage.setItem('likes', newLikes);
-    // Optionally, send the new like count to a backend service
   };
 
   return (

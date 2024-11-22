@@ -5,7 +5,6 @@ import { AiOutlineHome, AiOutlineUser, AiOutlineFundProjectionScreen } from 'rea
 import { IoCallOutline } from "react-icons/io5";
 import { CgFileDocument } from 'react-icons/cg';
 import logo from '../Assets/logo.png';
-// import Like from './Like';
 
 function NavBar() {
   const [expand, setExpand] = useState(false);
@@ -32,18 +31,22 @@ function NavBar() {
           aria-controls="responsive-navbar-nav"
           onClick={() => setExpand(expand ? false : "expanded")}
         />
+        
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
+
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => setExpand(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
               <Nav.Link as={Link} to="/about" onClick={() => setExpand(false)}>
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
+
             <Nav.Item>
               <Nav.Link as={Link} to="/project" onClick={() => setExpand(false)}>
                 <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Experiences
@@ -62,9 +65,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              {/* <Like />  */}
-            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
