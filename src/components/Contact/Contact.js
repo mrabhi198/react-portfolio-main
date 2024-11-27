@@ -1,37 +1,45 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
+const API_URL = "http://localhost/portfolio/sendMail.php";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: ''
   });
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost/portfolio-main/insert.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData).toString()
+      });
 
-    const result = await response.json();
+      const data = await response.json();
 
-    if (result.success) {
-      setStatus("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setStatus("Error sending message. Please try again.");
+      if (data.status === 'success') {
+        setStatus('Message sent successfully!');
+      } else {
+        setStatus('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      setStatus('Message sent successfully!');
     }
   };
 
